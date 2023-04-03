@@ -1,5 +1,5 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Project Lightning     (L-SHIFT TO SHOW/UNSHOW THE SCRIPT)", "BloodTheme")
+local Window = Library.CreateLib("Project Lightning", "BloodTheme")
 
 -- Players
 local Players = Window:NewTab("Players")
@@ -103,4 +103,14 @@ TPSection:NewButton("Police Station", "Click To Teleport To Police Station Place
     local destination = Vector3.new(846, 99, 2290)
 
     rootPart.CFrame = CFrame.new(846, 99, 2290)
+end)
+
+TPSection:NewButton("Prison", "Click To Teleport To Prison Place", function()
+    local player = game.Players.LocalPlayer
+    local character = player.Character or player.CharacterAdded:Wait()
+    local rootPart = character:WaitForChild("HumanoidRootPart")
+
+    local destination = Vector3.new(919, 99, 2372)
+
+    rootPart.CFrame = CFrame.new(919, 99, 2372)
 end)
